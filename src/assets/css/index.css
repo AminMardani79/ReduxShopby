@@ -1,0 +1,28 @@
+:root {
+  --main-blue: #3b71ff;
+  --main-black: #292a2f;
+  --inactive-text: #9e9ea3;
+  --main-white: #ffffff;
+  --main-gray: #a6a8b2;
+  --text-color: #5e5e5e;
+  --bg-light: #fafafa;
+  --footer-bg: #23272f;
+  --footer-text: #9ea1aa;
+  --main-red:#e92c2c;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+  background-color: var(--main-white);
+}
+a {
+  text-decoration: none;
+}
+ul{
+  list-style-type: none;
+}

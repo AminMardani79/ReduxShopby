@@ -1,0 +1,47 @@
+@import './index.css';
+.rec.rec-arrow {
+    background-color: transparent;
+    transition: all .2s ease-in-out;
+}
+.rec.rec-arrow:focus{
+    background-color: var(--main-blue) !important;
+    color: var(--main-white) !important;
+    border: 2px solid var(--main-blue);
+}
+.rec.rec-arrow:active{
+    background-color: var(--main-blue);
+}
+.rec.rec-arrow:hover{
+    background-color: var(--main-blue) !important;
+    color: var(--main-white) !important;
+    border: 2px solid var(--main-blue);
+}
+.rec-carousel-item:focus{
+    outline: none;
+}
+.rec.rec-dot{
+    box-shadow: none;
+    background-color: var(--main-white);
+    border: 2px solid var(--main-gray);
+}
+.rec.rec-dot:hover{
+    box-shadow: none;
+}
+.rec.rec-dot:focus{
+    box-shadow: none;
+    background-color: var(--main-gray);
+}
+.rec.rec-dot_active{
+    background-color: var(--main-gray);
+}
+@media screen and (max-width:990px) {
+    .rec.rec-arrow{
+        font-size: 17px;
+        width: 30px;
+    }
+}
+@media screen and (max-width:400px) {
+    .rec-carousel{
+        width: 322px !important;
+    }
+}

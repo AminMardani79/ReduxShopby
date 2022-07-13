@@ -1,0 +1,30 @@
+@import './index.css';
+.emptyContainer{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-top: 60px;
+}
+.emptyImage{
+    width: 400px;
+    margin-top: 50px;
+}
+.emptySubtitle{
+    color: var(--text-color);
+    font-size: 20px;
+    padding: 20px 0;
+}
+.emptyContainer a{
+    border: 2px solid var(--main-blue);
+    border-radius: 5px;
+    color: var(--main-blue);
+    padding: 5px 8px;
+    font-size: 14px;
+    transition: all .1s ease-in-out;
+}
+.emptyContainer a:hover{
+    color: var(--main-white);
+    background-color: var(--main-blue);
+}

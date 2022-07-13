@@ -1,0 +1,74 @@
+@import './index.css';
+.productContainer{
+    padding: 20px;
+    height: 230px;
+    box-shadow: 2px 2px 6px #a1a1a1;
+    margin: 12px 0;
+    border-radius: 6px;
+    transition: all .2s ease-in-out;
+}
+.productContainer:hover{
+    box-shadow: 6px 6px 15px #a1a1a1;
+}
+.productImage{
+    display: flex;
+    justify-content: center;
+}
+.productImage img{
+    width: 150px;
+    height: 120px;
+}
+.productName{
+    padding-top: 5px;
+}
+.productName a{
+    font-size: 12px;
+    color: var(--text-color);
+}
+.productInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+.productPrice{
+    font-size: 13px;
+    color: var(--main-black);
+    font-weight: 700;
+}
+.basket .addItem{
+    border: 2px solid var(--main-blue);
+    background-color: var(--main-white);
+    color: var(--main-blue);
+    border-radius: 5px;
+    padding: 4px 6px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.basket .increase,
+.basket .decrease{
+    border: 2px solid var(--main-blue);
+    background-color: var(--main-white);
+    color: var(--main-blue);
+    border-radius: 5px;
+    padding: 4px 6px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    margin-left: 3px;
+}
+.basket .increase:hover,
+.basket .decrease:hover{
+    background-color: var(--main-blue);
+    color: var(--main-white);
+}
+.basket .addItem:hover{
+    background-color: var(--main-blue);
+    color: var(--main-white);
+}
+.productCount{
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-color);
+}

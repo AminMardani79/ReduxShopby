@@ -1,0 +1,79 @@
+@import "./index.css";
+.bannerContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  width: 100%;
+  background-image: url("../img/dots.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bannerContent {
+  align-self: flex-start;
+  padding-top: 160px;
+}
+.bannerContent h2 {
+  color: var(--main-black);
+  font-size: 40px;
+  margin-bottom: 10px;
+  width: 21vw;
+}
+.bannerContent p {
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 600;
+  padding-bottom: 45px;
+}
+.bannerContent a {
+  background-color: var(--main-blue);
+  color: var(--main-white);
+  padding: 9px 13px;
+  border: 2px solid var(--main-blue);
+  border-radius: 20px;
+  font-size: 15px;
+  transition: all 0.2s ease-in-out;
+}
+.bannerContent a:hover {
+  background-color: var(--main-white);
+  color: var(--main-blue);
+}
+.bannerImages {
+  margin-right: 3vw;
+}
+.bannerImages img {
+  width: 40vw;
+  height: 600px;
+}
+@media screen and (max-width: 992px) {
+  .bannerImages img {
+    height: 550px;
+  }
+  .bannerContent h2 {
+    width: 29vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bannerImages {
+    display: none;
+  }
+  .bannerContent {
+    padding-top: 60px;
+    text-align: center;
+  }
+  .bannerContent h2 {
+    width: 60vw;
+    font-size: 30px;
+  }
+  .bannerContent p {
+    font-size: 11px;
+  }
+  .bannerContent a {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bannerContent h2 {
+    width: 90vw !important;
+  }
+}

@@ -1,0 +1,186 @@
+:root {
+  --main-red: #f3524f;
+  --main-blue: #1a73e8;
+  --main-error: #d93025;
+}
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/signup.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.formContainer form {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 25px 2.7rem;
+  width: 30%;
+  border-radius: 2px;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 1px 1px 10px #cecece;
+}
+.formHeader {
+  color: var(--main-red);
+  padding: 20px 0;
+  font-size: 32px;
+}
+.inputField {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.inputField label {
+  font-size: 13px;
+  font-weight: 300;
+  color: #5f6368;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  pointer-events: none;
+  transition: all 0.1s ease-in-out;
+}
+.inputField input {
+  margin: 8px 0;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 1px solid #9f9fa0;
+  color: #202124;
+  height: 38px;
+  width: 100%;
+}
+.inputField input.invalidInput {
+  border: 1px solid var(--main-error) !important;
+}
+.inputField input.invalidInput:focus {
+  border: 2px solid var(--main-error) !important;
+}
+.inputField input:focus {
+  outline: none;
+  border: 2px solid var(--main-blue);
+}
+.touchedInput {
+  border: 1px solid var(--main-blue) !important;
+}
+.inputField input:focus + label {
+  top: 2px;
+  left: 5px;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2px 4px;
+  color: var(--main-blue);
+}
+.inputField input.invalidInput:focus + label {
+  color: var(--main-error);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.inputField label.activeLabel {
+  top: 2px;
+  left: 5px;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2px 4px;
+  color: var(--main-blue);
+}
+.inputField input.invalidInput + label.activeLabel {
+  color: var(--main-error);
+}
+.inputField span {
+  color: var(--main-error);
+  font-size: 10px;
+}
+.inputField .errorIcon,
+.checkBoxField .errorIcon {
+  color: #fff;
+  background-color: var(--main-error);
+  border-radius: 50%;
+  padding: 1px 5px;
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 4px;
+  font-size: 10px;
+}
+.checkBoxField {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.checkBoxField span {
+  margin-top: 3px;
+  color: var(--main-error);
+  font-size: 10px;
+}
+.checkBoxField label {
+  font-size: 12px;
+  color: var(--main-blue);
+}
+.checkBoxField > div {
+  display: flex;
+  align-items: center;
+}
+.checkBoxField input {
+  margin-left: 5px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.formButtons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  align-items: center;
+}
+.formButtons a {
+  text-decoration: none;
+  color: var(--main-red);
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.formButtons button {
+  background-color: var(--main-red);
+  color: #fff;
+  padding: 8px 10px;
+  cursor: pointer;
+  border: 1px solid var(--main-red);
+  border-radius: 2px;
+  transition: all 0.2s ease-in-out;
+}
+.formButtons button:hover {
+  background-color: #dd322f;
+}
+.formButtons .homeIcon{
+  font-size: 20px;
+  color: var(--main-blue);
+}
+@media (max-width: 1200px) {
+  .formContainer form {
+    width: 45%;
+  }
+  .formHeader {
+    font-size: 30px;
+  }
+}
+@media (max-width: 650px) {
+  .formContainer form {
+    width: 55%;
+  }
+  .formHeader {
+    font-size: 25px;
+  }
+}
+@media (max-width: 500px) {
+  .formContainer form {
+    width: 80%;
+  }
+}

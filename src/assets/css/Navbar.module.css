@@ -1,0 +1,99 @@
+@import "index.css";
+.navbarMenu {
+  position: relative;
+  text-align: center;
+}
+.navbarMenu .active {
+  color: var(--main-black);
+  transition: none;
+}
+.navbarMenu a {
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+  padding-bottom: 3px;
+  margin-right: 10px;
+}
+.navbarMenu a:hover {
+  color: var(--main-black);
+}
+.rightNav > .shoppingCart {
+  margin-right: 14px;
+  position: relative;
+}
+.rightNav .shoppingCart span {
+  position: absolute;
+  bottom: 3px;
+  right: -4px;
+  background-color: var(--main-blue);
+  color: var(--main-white);
+  padding: 2px 5px;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+.rightNav > .enterAccount a {
+  margin: 0 8px;
+}
+.rightNav .enterAccount .login {
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+.rightNav .enterAccount .login:hover {
+  color: var(--main-black);
+}
+.rightNav .enterAccount .signUp {
+  background-color: var(--main-white);
+  color: var(--main-blue);
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 20px;
+  border: 2px solid var(--main-blue);
+  padding: 6px 8px;
+  transition: all 0.2s ease-in-out;
+}
+.rightNav .enterAccount .signUp:hover {
+  background-color: var(--main-blue);
+  color: var(--main-white);
+}
+.logoContainer img {
+  width: 130px;
+}
+
+@media screen and (max-width: 768px) {
+  .rightNav .enterAccount .login {
+    display: none;
+  }
+  .rightNav .enterAccount .signUp {
+    border: none;
+    padding: 6px 2px;
+    font-size: 11px;
+  }
+  .rightNav > .enterAccount a {
+    margin: 0;
+  }
+  .rightNav {
+    order: 2;
+  }
+  .logoContainer {
+    order: 1;
+  }
+  .logoContainer img {
+    width: 115px;
+  }
+  .rightNav > .shoppingCart {
+    margin-right: 8px;
+  }
+  .rightNav .shoppingCart span {
+    padding: 1px 3px;
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 492px) {
+  .logoContainer {
+    display: none;
+  }
+}

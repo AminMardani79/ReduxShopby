@@ -1,0 +1,82 @@
+@import './index.css';
+.productsContainer{
+    display: grid;
+    grid-template-columns: repeat(4,20%);
+    gap: 10px 30px;
+    padding: 0 5vw 25px 5vw;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+}
+.paginationContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.paginationList{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+.paginationList li a{
+    border: 1px solid var(--main-blue);
+    background-color: var(--main-white);
+    border-radius: 6px;
+    color:var(--main-blue);
+    padding: 4px 8px;
+    margin: 0 3px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+}
+.paginationList li:last-child a,
+.paginationList li:first-child a{
+    padding: 1px 6px;
+    font-size: 15px;
+    font-weight: 900;
+}
+.paginationList li a:hover{
+    background-color: var(--main-blue);
+    color: var(--main-white);
+}
+.activeButton{
+    background-color: var(--main-blue) !important;
+    color: var(--main-white) !important;
+}
+.disabledButton{
+    opacity: .5;
+    cursor: no-drop !important;
+}
+.disabledButton:hover{
+    background-color: var(--main-white) !important;
+    color:var(--main-blue) !important;
+}
+@media screen and (max-width:992px) {
+    .productsContainer{
+        grid-template-columns: repeat(3,auto);
+    }
+    .paginationContainer{
+        padding-top: 15px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .productsContainer {
+      padding: 0 4vw;
+    }
+  }
+  @media screen and (max-width:657px) {
+      .productsContainer{
+          grid-template-columns: repeat(2,auto);
+      }
+  }
+  @media screen and (max-width:446px) {
+      .productsContainer{
+          grid-template-columns: 80%;
+      }
+      
+  }
