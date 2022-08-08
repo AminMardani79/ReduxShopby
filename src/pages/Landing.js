@@ -14,10 +14,7 @@ import Navbar from "../components/Navbar/Navbar";
 const Landing = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    const getProducts = async (dispatch) => {
-      await fetchProducts(dispatch);
-    };
-    getProducts(dispatch);
+    dispatch(fetchProducts());
   });
   return (
     <div>

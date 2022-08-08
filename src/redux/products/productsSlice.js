@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { fetchProducts } from "../api/apiCalls";
 
 const productsSlice = createSlice({
   name: "products",
@@ -7,21 +8,22 @@ const productsSlice = createSlice({
     error: "",
     products: [],
   },
-  reducers: {
-    fetchProductRequest: (state) => {
+  extraReducers: (builder) => {
+    builder.addCase(fetchProducts.pending, (state) => {
       state.loading = true;
-    },
-    fetchProductSuccess: (state, action) => {
+      state.error = "";
+      state.products = [];
+    });
+    builder.addCase(fetchProducts.fulfilled, (state, action) => {
       state.loading = false;
       state.products = action.payload;
-    },
-    fetchProductFailure: (state, action) => {
+      state.error = "";
+    });
+    builder.addCase(fetchProducts.rejected, (state, action) => {
+      state.loading = false;
       state.products = [];
       state.error = action.payload;
-    },
+    });
   },
 });
-
-export const { fetchProductFailure, fetchProductRequest, fetchProductSuccess } =
-  productsSlice.actions;
 export default productsSlice.reducer;

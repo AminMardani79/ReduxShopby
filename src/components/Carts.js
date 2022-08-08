@@ -27,9 +27,6 @@ const Carts = () => {
     setInput(event.target.value);
   };
   useEffect(() => {
-    console.log("hello");
-  });
-  useEffect(() => {
     setTotal(state.total);
   }, [state]);
   return (
